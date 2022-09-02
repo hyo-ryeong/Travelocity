@@ -1,0 +1,186 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body{ font-family: "맑은 고딕",Verdana, Geneva, Tahoma, sans-serif;}
+
+h1{font-family: 'Lobster', cursive;}
+
+.header_top,.header_title, .s1 , .s3_cont, .s4, .footer_in{
+  max-width: 1200px;/*1200 고정이지만 화면이 작았을 땐 100%로 고정이 된다.*/
+  margin: 0 auto; 
+}
+header{
+  height:500px;
+  background-color: black;
+  background-image: url('../img/headerbg.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.header_top{
+  display: flex;
+  justify-content: space-between;
+  padding : 15px 10px 0;
+}
+.top_logo{ }
+.top_logo a{  font-family: 'Lobster', cursive; font-weight: bold;}
+
+.top_menu{ }
+.top_menu ul{ overflow: hidden;}
+.top_menu li{ float: left; margin-left: 25px;}
+.top_menu a{ font-size: 14px;}
+
+.header_title{ 
+  color : #fff; 
+  /*text-align: center;
+  padding-top: 170px; -> 단순히 가운데로만*/
+  padding: 150px 10px 0 60px;
+
+}
+.header_title h1{
+  font-family: 'Lobster', cursive;
+  font-size: 90px;
+}
+.header_title p{
+
+}
+
+
+/*  nav */
+.gnb{height: 50px; background-color:#b2d8f7; /* 가운데 정렬 set 2*/ text-align: center;}
+.gnb > div {}
+.gnb ul{overflow : hidden; /* 가운데 정렬 set 2*/  display : inline-block;}
+.gnb li{ float : left;}
+.gnb a{ display: inline-block; margin : 0 20px; line-height: 50px; color : #676767;  }
+
+li.active a, .gnb li:hover a{ color : #111;}
+li.active a::after , .gnb li:hover a::after{
+  display: block; content: "";
+  width: 100%; height : 3px;
+  background-color: #7F2D51;
+  margin-top : -3px; 
+}
+
+/* contents */
+section{}
+.s1{
+  display: flex;
+  margin : 110px auto;
+}
+.s1>div{
+  flex : 1; /* 1:1:1:1 을 뜻한다.*/
+  text-align: center;
+}
+.s1_txt{
+padding-top : 10px; 
+}
+.s1_txt strong{
+
+}
+.s1_txt span{
+ font-size : 14px; color : #858585;
+}
+
+.s2{
+  background : #F5E4DA;
+  padding : 60px;
+}
+
+.s2>div{text-align: center;}
+.s2_icons{  display: inline-block;}
+.s2_icons li{ display: inline-block; margin : 0 20px; }
+.s2_icons a{ display: block; /*  영역 전체를 차지할 수 있게*/}
+.s2_icons a img{ width: 80px ; height: 80px;}
+.s2_icons a p{ 
+  margin-top : 10px;
+  font-size: 14px;;
+}
+
+.s3{
+  margin : 110px auto;
+}
+.s3_title{
+  text-align: center; 
+  margin-bottom: 50px;
+}
+.s3_title p{ 
+  font-size: 14px; color : #858585;
+}
+.s3_title h3{ font-size: 22px; margin-top : 10px; }
+.s3_title h3::after{
+  display : block; content: "";
+  position: absolute; left : 50%; transform: (-50%); margin-left: -40px;/* width 가 80px이니까 가운데로 자리함*/
+  width: 80px; height : 3px;
+  background-color: #7F2D51;
+}
+
+.s3_cont{
+  padding : 0 10px; 
+  display: flex;
+}
+.s3_cont > div{
+}
+.s3_cont > div:nth-child(1) img{
+  width: 280px;
+  height: 420px;
+  
+}
+.s3_cont > div:nth-child(2){
+  margin:0 20px;
+  width : 400px;
+}
+.s3_cont > div:nth-child(2) img:nth-child(1) {
+  margin-bottom:20px;
+}
+.s3_cont > div:last-child{
+  padding:60px 0 0 50px;
+  
+}
+.s3_cont > div:last-child h4 { 
+  margin-bottom:10px;
+}
+.s3_cont > div:last-child p { 
+  margin:30px 0; 
+  font-size:14px;
+  line-height:1.4;
+}
+.more{ color: rgb(35, 15, 126);}
+.sns {margin-top: 50px; }
+.sns a{ 
+  display: inline-block; width : 30px; height: 30px; 
+  background-color: #111;
+border-radius: 50%;
+/* 안에 있는 요소 가운데 정렬*/
+text-align: center;
+margin-right: 10px;}
+.sns i{
+  /*이모티콘 = 글자태그*/ color : #fff; line-height: 30px;
+}
+
+.s4{ margin: 110px auto;}
+.s4 h3{ font-size: 22px; margin-bottom : 30px; }
+.s4 h3::after{
+  display : block; content: "";
+  width: 50px; height : 3px;
+  background-color: #7F2D51;
+  margin-top: 10px;
+}
+.s4 ul{ overflow : hidden;}
+.s4 li{ float: left; padding : 0 10px;}
+.s4 img{ width : 180px;}
+
+footer{ background-color: #c4c4c4;
+padding: 50px 0;
+}
+.footer_in{display: flex; justify-content: space-between;}
+footer h4{font-family: 'Lobster', cursive; font-size: 22px; font-weight: normal;}
+footer h4:after{
+  display : block; content: "";
+  width: 60px; height : 3px;
+  background-color: #7F2D51;
+  margin-top: 6px;}
+footer p{text-align: right; font-size: 14px; color : #fff;}
+footer .address{    
+  display:block; /* 아래로 내려가게 */
+  margin-top:6px;
+  font-size:12px;
+  color:#676767}
